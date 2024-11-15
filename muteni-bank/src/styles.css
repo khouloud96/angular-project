@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+/* Couleurs principales */
+:root {
+  --turquoise-blue: #13aa9a;
+  --dark-blue: #222c4a;
+  --white: #ffffff;
+}
+
+/* Body global */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+/* Boutons */
+button {
+  background-color: var(--turquoise-blue);
+  border: none;
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0f877b;
+}
+
+/* Titres */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--turquoise-blue) !important;
+}
+
+/* Liens */
+a {
+  color: var(--turquoise-blue) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: underline;
+}
