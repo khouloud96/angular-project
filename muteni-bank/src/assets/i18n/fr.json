@@ -1,0 +1,12 @@
+{
+  "navbar": {
+    "logo": "Muteni Banque",
+    "home": "Accueil",
+    "documents": "Mes Documents",
+    "profile": "Mon Profil",
+    "contact": "Nous Contacter",
+    "logout": "Déconnexion",
+    "logoAlt": "logo de la banque",
+    "languageAlt": "changer la langue"
+  }
+}

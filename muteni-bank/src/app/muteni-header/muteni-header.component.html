@@ -4,12 +4,12 @@
     <a class="navbar-brand" href="#">
       <img
         src="assets/images/logo-blue.png"
-        alt="Logo"
+        alt="{{ 'navbar.logoAlt' | translate }}"
         width="50"
         height="50"
         class="d-inline-block align-top"
       />
-      Muteni Bank
+      {{ "navbar.logo" | translate }}
     </a>
 
     <!-- Bouton pour afficher/masquer le menu mobile -->
@@ -29,21 +29,52 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+          <a class="nav-link active" aria-current="page" href="#">{{
+            "navbar.home" | translate
+          }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mes documents</a>
+          <a class="nav-link" href="#">{{ "navbar.documents" | translate }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mon profil</a>
+          <a class="nav-link" href="#">{{ "navbar.profile" | translate }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Nous contacter</a>
+          <a class="nav-link" href="#">{{ "navbar.contact" | translate }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Déconnexion</a>
+          <a class="nav-link" href="#">{{ "navbar.logout" | translate }}</a>
         </li>
       </ul>
+    </div>
+
+    <!-- Changer langue -->
+    <div class="language-switcher ms-3">
+      <div class="dropdown">
+        <button
+          class="btn btn-light dropdown-toggle"
+          type="button"
+          id="languageDropdown"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            [src]="getFlag(currentLang)"
+            alt="{{ 'navbar.languageAlt' | translate }}"
+            width="20"
+            height="20"
+          />
+          {{ currentLang.toUpperCase() }}
+        </button>
+
+        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+          <li *ngFor="let lang of availableLanguages">
+            <a class="dropdown-item" (click)="switchLang(lang)">{{
+              lang.toUpperCase()
+            }}</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
