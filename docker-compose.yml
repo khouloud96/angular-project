@@ -3,11 +3,7 @@ services:
   angular-app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: my-muteni-app/Dockerfile
     ports:
-      - "4200:4200"
-    volumes:
-      - .:/app
-      - /app/node_modules
-    stdin_open: true
-    tty: true
+      - "4200:80"
+    restart: always
