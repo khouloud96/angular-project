@@ -3,12 +3,16 @@
   --turquoise-blue: #13aa9a;
   --dark-blue: #222c4a;
   --white: #ffffff;
+  --hover: #0f877b;
+
+  --font-overpass: "Overpass", sans-serif;
+  --font-ubuntu: "Ubuntu", sans-serif;
 }
 
 /* Body global */
 body {
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: var(--font-overpass);
   background-color: var(--dark-blue);
   color: var(--white);
 }
@@ -25,7 +29,7 @@ button {
 }
 
 button:hover {
-  background-color: #0f877b;
+  background-color: var(--hover);
 }
 
 /* Titres */
@@ -38,12 +42,28 @@ h6 {
   color: var(--turquoise-blue) !important;
 }
 
-/* Liens */
-a {
-  color: var(--turquoise-blue) !important;
-  text-decoration: none !important;
+/* Paragraphes */
+p,
+span {
+  font-family: var(--font-ubuntu);
 }
 
-a:hover {
-  text-decoration: underline;
+/* Liens */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Cartes ou sections */
+.card {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border: 1px solid var(--turquoise-blue);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }

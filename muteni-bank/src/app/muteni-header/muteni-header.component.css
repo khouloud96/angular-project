@@ -1,0 +1,35 @@
+.navbar {
+  background-color: var(--white) !important;
+  border-bottom: 2px solid #ccc;
+}
+
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--turquoise-blue);
+}
+
+.nav-link {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--turquoise-blue);
+}
+
+.nav-link:hover,
+.active {
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+
+.language-switcher img {
+  margin-right: 5px;
+  vertical-align: middle;
+}
