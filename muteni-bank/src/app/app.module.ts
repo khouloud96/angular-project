@@ -6,7 +6,11 @@ import { AppComponent } from './app.component';
 import { MuteniHeaderComponent } from './muteni-header/muteni-header.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {
+  HttpClient,
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 
 // Fonction pour charger les fichiers de traduction
@@ -14,13 +18,13 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
+//initialises the TranslateService and according to the configuration provided
 @NgModule({
   declarations: [AppComponent, MuteniHeaderComponent, ProfileComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    TranslateModule,
+    BrowserModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -29,7 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
     }),
   ],
-  providers: [HttpClient],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
