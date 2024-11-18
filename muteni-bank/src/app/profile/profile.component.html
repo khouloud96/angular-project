@@ -82,9 +82,16 @@
 
     <!-- Bouton aligné à droite -->
     <div class="text-end mt-4">
-      <button class="btn btn-success btn-lg mb-4">
+      <button
+        class="mb-4"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#popupModal"
+      >
         {{ "profile.button" | translate }}
       </button>
     </div>
   </div>
 </div>
+
+<app-start-popup></app-start-popup>

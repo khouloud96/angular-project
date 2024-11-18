@@ -21,5 +21,10 @@
     "stepThree": "Signer électroniquement",
     "imgAlt": "Illustration femme",
     "button": "Commencer"
+  },
+  "popup": {
+    "title": "Vos données personnelles",
+    "content": "Les informations recueillies au moyen de ce document sont nécessaires à l'assureur pour régler le capital décès dont vous êtes bénéficiaire, et satisfaire à ses obligations légales. Vous bénéficiez de différents droits sur vos données à caractère personnel (droit d'accès, de rectification, d'opposition…). Pour en savoir plus, vous pouvez vous rendre à l'adresse suivante :",
+    "button": "Continuer"
   }
 }

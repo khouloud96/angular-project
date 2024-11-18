@@ -12,6 +12,7 @@ import {
   withInterceptorsFromDi,
 } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
+import { StartPopupComponent } from './start-popup/start-popup.component';
 
 // Fonction pour charger les fichiers de traduction
 export function HttpLoaderFactory(http: HttpClient) {
@@ -20,11 +21,15 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 //initialises the TranslateService and according to the configuration provided
 @NgModule({
-  declarations: [AppComponent, MuteniHeaderComponent, ProfileComponent],
+  declarations: [
+    AppComponent,
+    MuteniHeaderComponent,
+    ProfileComponent,
+    StartPopupComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
