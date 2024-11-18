@@ -13,6 +13,7 @@ import {
 } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 import { StartPopupComponent } from './start-popup/start-popup.component';
+import { MultiStepFormComponent } from './multi-step-form/multi-step-form.component';
 
 // Fonction pour charger les fichiers de traduction
 export function HttpLoaderFactory(http: HttpClient) {
@@ -26,6 +27,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MuteniHeaderComponent,
     ProfileComponent,
     StartPopupComponent,
+    MultiStepFormComponent,
   ],
   imports: [
     BrowserModule,

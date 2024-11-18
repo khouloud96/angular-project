@@ -10,6 +10,18 @@ export class StartPopupComponent {
   constructor(private router: Router) {}
 
   onContinue(): void {
-    this.router.navigate(['/']);
+    // Étape 1 : Fermer manuellement la modale
+    const modalElement = document.getElementById('popupModal');
+    if (modalElement) {
+      modalElement.style.display = 'none'; // Cache la modale
+      modalElement.setAttribute('aria-hidden', 'true'); // Marque la modale comme cachée
+      modalElement.classList.remove('show'); // Supprime la classe "show" si elle est utilisée pour l'affichage
+    }
+
+    // Étape 2 : Supprimer l'arrière-plan (modal-backdrop) manuellement
+    const backdropElements = document.querySelectorAll('.modal-backdrop');
+    backdropElements.forEach((backdrop) => backdrop.remove());
+
+    this.router.navigate(['/honor-declaration-form']);
   }
 }
