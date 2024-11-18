@@ -1,0 +1,58 @@
+.circle {
+  border: 2px solid var(--turquoise-blue);
+}
+
+.circle svg {
+  width: 24px;
+  height: 24px;
+  color: var(--turquoise-blue);
+  transition: fill 0.3s ease;
+}
+
+.steps .step {
+  flex: 1;
+  text-align: center;
+}
+
+.steps .step {
+  text-align: center;
+}
+
+.steps .step p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (min-width: 768px) {
+  .steps {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .steps .step p {
+    flex-direction: row;
+    align-items: baseline;
+    text-align: left;
+  }
+}
+
+.steps .step span.fs-1 {
+  font-size: 3rem;
+}
+
+.text-muted {
+  line-height: 1.6;
+}
+
+.img-right {
+  max-width: 50%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .img-right {
+    max-width: 80%;
+  }
+}

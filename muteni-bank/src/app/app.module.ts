@@ -7,6 +7,7 @@ import { MuteniHeaderComponent } from './muteni-header/muteni-header.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './profile/profile.component';
 
 // Fonction pour charger les fichiers de traduction
 export function HttpLoaderFactory(http: HttpClient) {
@@ -14,7 +15,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, MuteniHeaderComponent],
+  declarations: [AppComponent, MuteniHeaderComponent, ProfileComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

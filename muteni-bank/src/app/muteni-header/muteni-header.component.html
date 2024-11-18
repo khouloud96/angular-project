@@ -3,7 +3,7 @@
     <!-- Logo à gauche -->
     <a class="navbar-brand" href="#">
       <img
-        src="assets/images/logo-blue.png"
+        src="assets/images/muteni.svg"
         alt="{{ 'navbar.logoAlt' | translate }}"
         width="50"
         height="50"
@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">{{
+          <a class="nav-link" aria-current="page" href="#">{{
             "navbar.home" | translate
           }}</a>
         </li>
@@ -37,7 +37,9 @@
           <a class="nav-link" href="#">{{ "navbar.documents" | translate }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">{{ "navbar.profile" | translate }}</a>
+          <a class="nav-link active" routerLink="/profile">{{
+            "navbar.profile" | translate
+          }}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">{{ "navbar.contact" | translate }}</a>

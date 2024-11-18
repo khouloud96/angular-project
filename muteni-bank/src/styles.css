@@ -23,7 +23,7 @@ button {
   border: none;
   color: var(--white);
   padding: 10px 20px;
-  border-radius: 10px !important;
+  border-radius: 50px !important;
   cursor: pointer !important;
   transition: background-color 0.3s;
 }
