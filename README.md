@@ -34,23 +34,23 @@ This command will:
 - Start the container.
 - The application will be available at http://localhost:4200 in your browser.
 
-# Gestion de la Traduction avec ngx-translate dans Angular
+# Translation Management with ngx-translate in Angular
 
-Ce projet utilise la bibliothèque `ngx-translate` pour la gestion multilingue des interfaces utilisateur. `ngx-translate` permet de charger dynamiquement les traductions depuis des fichiers JSON et de basculer facilement entre plusieurs langues.
+This project uses the `ngx-translate` library to handle multilingual user interfaces. `ngx-translate` allows you to dynamically load translations from JSON files and easily switch between multiple languages.
 
 ---
 
-## Fonctionnalités
+## Features
 
-- **Support multilingue** : Traductions disponibles pour plusieurs langues.
-- **Changement de langue à runtime** : Permet à l'utilisateur de changer la langue sans recharger l'application.
-- **Chargement dynamique** : Les traductions sont chargées à la demande via des fichiers JSON.
+- **Multilingual support**: Translations are available for multiple languages.
+- **Runtime language switching**: Users can change the language without reloading the application.
+- **Dynamic loading**: Translations are loaded on demand from JSON files.
 
 ---
 
 ## Installation
 
-1. **Installer les dépendances nécessaires** :
+1. **Install the required dependencies**:
 
    ```bash
    npm install @ngx-translate/core @ngx-translate/http-loader
