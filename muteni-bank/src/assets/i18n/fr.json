@@ -8,5 +8,18 @@
     "logout": "Déconnexion",
     "logoAlt": "logo de la banque",
     "languageAlt": "changer la langue"
+  },
+  "profile": {
+    "title": "FORMULAIRE ATTESTATION SUR L'HONNEUR",
+    "subtitle": "À quoi sert ce formulaire ?",
+    "paragraphOne": "Ce formulaire nous permet de déterminer si vous êtes bénéficiaire ou non d'un ou plusieurs contrats d'assurance vie souscrit par le défunt chez un autre assureur que",
+    "insurerName": "[Nom]",
+    "paragraphTwo": "Cette précision nous permettra de définir l'abattement dont vous pouvez bénéficier et la fiscalité applicable en fonction de votre situation, ainsi que de vous en acquitter auprès de l'Administration fiscale.",
+    "stepsTitle": "Les étapes à suivre",
+    "stepOne": "Compléter le formulaire en ligne",
+    "stepTwo": "Vérifier les données saisies",
+    "stepThree": "Signer électroniquement",
+    "imgAlt": "Illustration femme",
+    "button": "Commencer"
   }
 }

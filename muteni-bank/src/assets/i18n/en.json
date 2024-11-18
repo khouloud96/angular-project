@@ -8,5 +8,18 @@
     "logout": "Logout",
     "logoAlt": "Bank logo",
     "languageAlt": "change language"
+  },
+  "profile": {
+    "title": "HONOR DECLARATION FORM",
+    "subtitle": "What is this form for?",
+    "paragraphOne": "This form allows us to determine whether you are the beneficiary of one or more life insurance policies taken out by the deceased with an insurer other than",
+    "insurerName": "[Name]",
+    "paragraphTwo": "This clarification will enable us to define the tax exemption you may qualify for, the applicable tax regulations based on your situation, and to fulfill obligations with the Tax Administration.",
+    "stepsTitle": "Steps to Follow",
+    "stepOne": "Complete the form online",
+    "stepTwo": "Verify the entered information",
+    "stepThree": "Sign electronically",
+    "imgAlt": "Woman illustration",
+    "button": "Start"
   }
 }
