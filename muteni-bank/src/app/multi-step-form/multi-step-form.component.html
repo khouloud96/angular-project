@@ -23,7 +23,18 @@
 
     <div>
       <h3 class="card-title mb-0">{{ "profile.title" | translate }}</h3>
-      <strong class="text-muted mb-0">Vos informations</strong>
+      <strong *ngIf="currentStep === 1" class="text-muted mb-0">{{
+        "form.subtitleStep1" | translate
+      }}</strong>
+      <strong *ngIf="currentStep === 2" class="text-muted mb-0">{{
+        "form.subtitleStep2" | translate
+      }}</strong>
+      <strong *ngIf="currentStep === 3" class="text-muted mb-0">{{
+        "form.subtitleStep3" | translate
+      }}</strong>
+      <strong *ngIf="currentStep === 4" class="text-muted mb-0">{{
+        "form.subtitleStep4" | translate
+      }}</strong>
     </div>
   </div>
 
@@ -34,7 +45,8 @@
       [style.width]="(currentStep / 4) * 100 + '%'"
       [style.background-color]="'#13aa9a'"
     >
-      Étape {{ currentStep }} sur 4
+      {{ "form.step" | translate }} {{ currentStep }}
+      {{ "form.stepOf" | translate }} 4
     </div>
   </div>
 
@@ -66,7 +78,7 @@
         (click)="previousStep()"
         [disabled]="currentStep === 1"
       >
-        Précédent
+        {{ "form.buttonPrec" | translate }}
       </button>
 
       <button
@@ -75,11 +87,11 @@
         (click)="nextStep()"
         [disabled]="!form.get(['step' + currentStep])?.valid"
       >
-        Continuer
+        {{ "form.buttonNext" | translate }}
       </button>
 
       <button *ngIf="currentStep === 4" type="button" (click)="submit()">
-        Valider
+        {{ "form.buttonSubmit" | translate }}
       </button>
     </div>
   </form>

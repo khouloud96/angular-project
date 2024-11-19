@@ -26,5 +26,17 @@
     "title": "Vos données personnelles",
     "content": "Les informations recueillies au moyen de ce document sont nécessaires à l'assureur pour régler le capital décès dont vous êtes bénéficiaire, et satisfaire à ses obligations légales. Vous bénéficiez de différents droits sur vos données à caractère personnel (droit d'accès, de rectification, d'opposition…). Pour en savoir plus, vous pouvez vous rendre à l'adresse suivante :",
     "button": "Continuer"
+  },
+  "form": {
+    "subtitleStep1": "Les références [Nom]",
+    "subtitleStep2": "Vos informations",
+    "subtitleStep3": "Votre situation fiscale",
+    "subtitleStep4": "Récapitulatif",
+    "step": "Étape",
+    "stepOf": "sur",
+    "buttonNext": "Continuer",
+    "buttonPrec": "Précédent",
+    "buttonSubmit": "Valider",
+    "buttonUpdate": "Modifier"
   }
 }

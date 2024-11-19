@@ -26,5 +26,17 @@
     "title": "Your Personal Data",
     "content": "The information collected through this document is required by the insurer to process the death benefit you are entitled to and to fulfill its legal obligations. You have various rights regarding your personal data (right of access, rectification, opposition, etc.). For more information, you can visit the following address:",
     "button": "Continue"
+  },
+  "form": {
+    "subtitleStep1": "References [Name]",
+    "subtitleStep2": "Your information",
+    "subtitleStep3": "Your tax situation",
+    "subtitleStep4": "Summary",
+    "step": "Step",
+    "stepOf": "of",
+    "buttonNext": "Continue",
+    "buttonPrec": "Previous",
+    "buttonSubmit": "Validate",
+    "buttonUpdate": "Update"
   }
 }
