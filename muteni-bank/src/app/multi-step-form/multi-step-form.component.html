@@ -74,7 +74,7 @@
     <div class="d-flex justify-content-between" *ngIf="currentStep <= 4">
       <button
         type="button"
-        class="btn btn-secondary"
+        class="btn btn-secondary mb-4"
         (click)="previousStep()"
         [disabled]="currentStep === 1"
       >
@@ -84,13 +84,19 @@
       <button
         *ngIf="currentStep !== 4"
         type="button"
+        class="mb-4"
         (click)="nextStep()"
         [disabled]="!form.get(['step' + currentStep])?.valid"
       >
         {{ "form.buttonNext" | translate }}
       </button>
 
-      <button *ngIf="currentStep === 4" type="button" (click)="submit()">
+      <button
+        *ngIf="currentStep === 4"
+        type="button"
+        class="mb-4"
+        (click)="submit()"
+      >
         {{ "form.buttonSubmit" | translate }}
       </button>
     </div>

@@ -1,20 +1,94 @@
 <div [formGroup]="$any(parentForm.get('step1'))">
-  <div class="mb-3">
-    <label for="firstName" class="form-label">Prénom</label>
-    <input
-      type="text"
-      id="firstName"
-      class="form-control"
-      formControlName="firstName"
-    />
-  </div>
-  <div class="mb-3">
-    <label for="lastName" class="form-label">Nom</label>
-    <input
-      type="text"
-      id="lastName"
-      class="form-control"
-      formControlName="lastName"
-    />
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>{{ "form.titleStep1" | translate }}</h5>
+        <p>
+          {{ "form.notice" | translate }}
+        </p>
+        <div class="mb-3 position-relative">
+          <label for="lastName" class="form-label h6">{{
+            "form.lastName" | translate
+          }}</label>
+          <input
+            type="text"
+            id="lastName"
+            class="form-control"
+            formControlName="lastName"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step1')?.get('lastName')?.valid &&
+                parentForm.get('step1')?.get('lastName')?.touched,
+              'is-invalid':
+                parentForm.get('step1')?.get('lastName')?.invalid &&
+                parentForm.get('step1')?.get('lastName')?.touched
+            }"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="firstName" class="form-label h6">{{
+            "form.firstName" | translate
+          }}</label>
+          <input
+            type="text"
+            id="firstName"
+            class="form-control"
+            formControlName="firstName"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step1')?.get('firstName')?.valid &&
+                parentForm.get('step1')?.get('firstName')?.touched,
+              'is-invalid':
+                parentForm.get('step1')?.get('firstName')?.invalid &&
+                parentForm.get('step1')?.get('firstName')?.touched
+            }"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="dateOfBirth" class="form-label h6">{{
+            "form.dateOfBirth" | translate
+          }}</label>
+          <input
+            type="date"
+            id="dateOfBirth"
+            class="form-control"
+            formControlName="dateOfBirth"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step1')?.get('dateOfBirth')?.valid &&
+                parentForm.get('step1')?.get('dateOfBirth')?.touched,
+              'is-invalid':
+                parentForm.get('step1')?.get('dateOfBirth')?.invalid &&
+                parentForm.get('step1')?.get('dateOfBirth')?.touched
+            }"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="clientNumber" class="form-label h6">{{
+            "form.clientNumber" | translate
+          }}</label>
+          <p class="text-muted" style="font-style: italic">
+            <small> {{ "form.remark" | translate }}</small>
+          </p>
+          <input
+            type="number"
+            id="clientNumber"
+            class="form-control"
+            formControlName="clientNumber"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step1')?.get('clientNumber')?.valid &&
+                parentForm.get('step1')?.get('clientNumber')?.touched,
+              'is-invalid':
+                parentForm.get('step1')?.get('clientNumber')?.invalid &&
+                parentForm.get('step1')?.get('clientNumber')?.touched
+            }"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </div>

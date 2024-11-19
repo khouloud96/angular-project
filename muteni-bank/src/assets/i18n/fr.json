@@ -37,6 +37,13 @@
     "buttonNext": "Continuer",
     "buttonPrec": "Précédent",
     "buttonSubmit": "Valider",
-    "buttonUpdate": "Modifier"
+    "buttonUpdate": "Modifier",
+    "titleStep1": "Renseigner les informations du défunt",
+    "notice": "Tous les champs sont obligatoires sauf ceux indiqués comme étant facultatifs.",
+    "lastName": "Nom",
+    "firstName": "Prénom",
+    "dateOfBirth": "Date de naissance",
+    "clientNumber": "Numéro client",
+    "remark": "Veuillez noter que le défunt peut avoir plusieurs numéros client. C'est pourquoi le numéro affiché ici peut être différent de celui présent sur le formulaire reçu par courrier."
   }
 }

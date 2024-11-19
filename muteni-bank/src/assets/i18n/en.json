@@ -37,6 +37,13 @@
     "buttonNext": "Continue",
     "buttonPrec": "Previous",
     "buttonSubmit": "Validate",
-    "buttonUpdate": "Update"
+    "buttonUpdate": "Update",
+    "titleStep1": "Enter the deceased's information",
+    "notice": "All fields are mandatory except those marked as optional.",
+    "lastName": "Last Name",
+    "firstName": "First Name",
+    "dateOfBirth": "Date of birth",
+    "clientNumber": "Client Number",
+    "remark": "Please note that the deceased may have multiple client numbers. That's why the number displayed here may be different from the one on the form received by mail."
   }
 }

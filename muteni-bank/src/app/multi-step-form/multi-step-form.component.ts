@@ -15,6 +15,8 @@ export class MultiStepFormComponent {
       step1: this.fb.group({
         firstName: ['', Validators.required],
         lastName: ['', Validators.required],
+        dateOfBirth: ['', Validators.required],
+        clientNumber: ['', Validators.required],
       }),
       step2: this.fb.group({
         email: ['', [Validators.required, Validators.email]],
