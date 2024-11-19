@@ -1,1 +1,86 @@
-<p>multi-step-form works!</p>
+<div class="container mt-4">
+  <div class="d-flex align-items-center mb-4">
+    <div
+      class="circle bg-light text-primary d-flex justify-content-center align-items-center me-3"
+      style="width: 50px; height: 50px; border-radius: 50%"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        width="24"
+        height="24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15 19l-7-7 7-7"
+        />
+      </svg>
+    </div>
+
+    <div>
+      <h3 class="card-title mb-0">{{ "profile.title" | translate }}</h3>
+      <strong class="text-muted mb-0">Vos informations</strong>
+    </div>
+  </div>
+
+  <div class="progress mb-4">
+    <div
+      class="progress-bar"
+      role="progressbar"
+      [style.width]="(currentStep / 4) * 100 + '%'"
+      [style.background-color]="'#13aa9a'"
+    >
+      Étape {{ currentStep }} sur 4
+    </div>
+  </div>
+
+  <form [formGroup]="form">
+    <app-step-one-form
+      *ngIf="currentStep === 1"
+      [parentForm]="form"
+    ></app-step-one-form>
+    <app-step-two-form
+      *ngIf="currentStep === 2"
+      [parentForm]="form"
+    ></app-step-two-form>
+    <app-step-three-form
+      *ngIf="currentStep === 3"
+      [parentForm]="form"
+    ></app-step-three-form>
+    <app-step-recap-form
+      *ngIf="currentStep === 4"
+      [parentForm]="form"
+      [formData]="formData"
+      [goToStep]="goToStep.bind(this)"
+    ></app-step-recap-form>
+
+    <!-- Boutons de navigation -->
+    <div class="d-flex justify-content-between" *ngIf="currentStep <= 4">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        (click)="previousStep()"
+        [disabled]="currentStep === 1"
+      >
+        Précédent
+      </button>
+
+      <button
+        *ngIf="currentStep !== 4"
+        type="button"
+        (click)="nextStep()"
+        [disabled]="!form.get(['step' + currentStep])?.valid"
+      >
+        Continuer
+      </button>
+
+      <button *ngIf="currentStep === 4" type="button" (click)="submit()">
+        Valider
+      </button>
+    </div>
+  </form>
+</div>

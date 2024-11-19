@@ -14,6 +14,11 @@ import {
 import { ProfileComponent } from './profile/profile.component';
 import { StartPopupComponent } from './start-popup/start-popup.component';
 import { MultiStepFormComponent } from './multi-step-form/multi-step-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { StepOneFormComponent } from './step-one-form/step-one-form.component';
+import { StepTwoFormComponent } from './step-two-form/step-two-form.component';
+import { StepThreeFormComponent } from './step-three-form/step-three-form.component';
+import { StepRecapFormComponent } from './step-recap-form/step-recap-form.component';
 
 // Fonction pour charger les fichiers de traduction
 export function HttpLoaderFactory(http: HttpClient) {
@@ -28,6 +33,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProfileComponent,
     StartPopupComponent,
     MultiStepFormComponent,
+    StepOneFormComponent,
+    StepTwoFormComponent,
+    StepThreeFormComponent,
+    StepRecapFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +48,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient],
       },
     }),
+    ReactiveFormsModule,
   ],
   providers: [provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent],

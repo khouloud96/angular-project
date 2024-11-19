@@ -1,0 +1,20 @@
+<div [formGroup]="$any(parentForm.get('step1'))">
+  <div class="mb-3">
+    <label for="firstName" class="form-label">Prénom</label>
+    <input
+      type="text"
+      id="firstName"
+      class="form-control"
+      formControlName="firstName"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="lastName" class="form-label">Nom</label>
+    <input
+      type="text"
+      id="lastName"
+      class="form-control"
+      formControlName="lastName"
+    />
+  </div>
+</div>

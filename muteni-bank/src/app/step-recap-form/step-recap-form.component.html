@@ -1,0 +1,22 @@
+<div>
+  <ul class="list-group mb-3">
+    <li class="list-group-item">
+      <strong>Prénom :</strong> {{ formData.firstName }} <strong>Nom :</strong>
+      {{ formData.lastName }}
+      <button type="button" (click)="goToStep(1)">Modifier</button>
+    </li>
+
+    <li class="list-group-item">
+      <strong>Email :</strong> {{ formData.email }}
+      <strong>Téléphone :</strong> {{ formData.phone }}
+
+      <button type="button" (click)="goToStep(2)">Modifier</button>
+    </li>
+
+    <li class="list-group-item">
+      <strong>Adresse :</strong> {{ formData.address }}
+      <strong>Ville :</strong> {{ formData.city }}
+      <button type="button" (click)="goToStep(3)">Modifier</button>
+    </li>
+  </ul>
+</div>

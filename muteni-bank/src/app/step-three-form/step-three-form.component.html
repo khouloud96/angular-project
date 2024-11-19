@@ -1,0 +1,15 @@
+<div [formGroup]="$any(parentForm.get('step3'))">
+  <div class="mb-3">
+    <label for="address" class="form-label">Adresse</label>
+    <input
+      type="text"
+      id="address"
+      class="form-control"
+      formControlName="address"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="city" class="form-label">Ville</label>
+    <input type="text" id="city" class="form-control" formControlName="city" />
+  </div>
+</div>
