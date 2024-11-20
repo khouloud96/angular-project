@@ -73,7 +73,7 @@ export class MultiStepFormComponent {
           ],
         ],
         dateOfBirth: ['', [Validators.required]],
-        placeOfBirth: [
+        cityOfBirth: [
           '',
           [
             Validators.required,
@@ -81,14 +81,7 @@ export class MultiStepFormComponent {
             Validators.maxLength(100),
           ],
         ],
-        countryOfBirth: [
-          '',
-          [
-            Validators.required,
-            Validators.minLength(2),
-            Validators.maxLength(50),
-          ],
-        ],
+        countryOfBirth: ['', [Validators.required]],
         address: [
           '',
           [
@@ -110,14 +103,7 @@ export class MultiStepFormComponent {
             Validators.maxLength(100),
           ],
         ],
-        country: [
-          '',
-          [
-            Validators.required,
-            Validators.minLength(2),
-            Validators.maxLength(50),
-          ],
-        ],
+        country: ['', [Validators.required]],
       }),
       step3: this.fb.group({
         // Placeholder for step 3 validations

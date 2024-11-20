@@ -45,11 +45,25 @@
     "dateOfBirth": "Date de naissance",
     "clientNumber": "Numéro client",
     "remark": "Veuillez noter que le défunt peut avoir plusieurs numéros client. C'est pourquoi le numéro affiché ici peut être différent de celui présent sur le formulaire reçu par courrier.",
+
+    "identity": "Votre identité",
+    "residence": "Votre domicile",
+    "secondName": "Nom d'usage (si différent)",
+    "cityOfBirth": "Ville de naissance",
+    "countryOfBirth": "Pays de naissance",
+    "address": "Adresse de la résidence principale",
+    "addressComplement": "Complément d'adresse",
+    "postalCode": "Code postal",
+    "city": "Ville",
+    "country": "Pays",
+    "selectCountry": "Sélectionnez un pays",
+    "optional": "(facultatif)",
     "errors": {
       "required": "Ce champ est obligatoire.",
       "minLength": "Ce champ doit contenir au moins {{min}} caractères.",
       "maxLength": "Ce champ ne doit pas dépasser {{max}} caractères.",
       "pattern": "Veuillez entrer une valeur valide (lettres, accents, tirets).",
+      "postalCode": "Veuillez entrer un code postal valide",
       "invalidDate": "Format de date invalide.",
       "exactNumber": "Veuillez entrer exactement 8 chiffres."
     }
