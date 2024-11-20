@@ -13,7 +13,7 @@
     "title": "HONOR DECLARATION FORM",
     "subtitle": "What is this form for?",
     "paragraphOne": "This form allows us to determine whether you are the beneficiary of one or more life insurance policies taken out by the deceased with an insurer other than",
-    "insurerName": "[Name]",
+    "insurerName": "Muteni",
     "paragraphTwo": "This clarification will enable us to define the tax exemption you may qualify for, the applicable tax regulations based on your situation, and to fulfill obligations with the Tax Administration.",
     "stepsTitle": "Steps to Follow",
     "stepOne": "Complete the form online",
@@ -28,7 +28,7 @@
     "button": "Continue"
   },
   "form": {
-    "subtitleStep1": "References [Name]",
+    "subtitleStep1": "References Muteni",
     "subtitleStep2": "Your information",
     "subtitleStep3": "Your tax situation",
     "subtitleStep4": "Summary",
@@ -44,6 +44,14 @@
     "firstName": "First Name",
     "dateOfBirth": "Date of birth",
     "clientNumber": "Client Number",
-    "remark": "Please note that the deceased may have multiple client numbers. That's why the number displayed here may be different from the one on the form received by mail."
+    "remark": "Please note that the deceased may have multiple client numbers. That's why the number displayed here may be different from the one on the form received by mail.",
+    "errors": {
+      "required": "This field is required.",
+      "minLength": "This field must be at least {{min}} characters long.",
+      "maxLength": "This field must not exceed {{max}} characters.",
+      "pattern": "Please enter a valid value (letters, accents, dash).",
+      "invalidDate": "Invalid date format.",
+      "exactNumber": "Please enter exactly 8 digits."
+    }
   }
 }

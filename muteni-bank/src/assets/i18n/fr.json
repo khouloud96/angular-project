@@ -13,7 +13,7 @@
     "title": "FORMULAIRE ATTESTATION SUR L'HONNEUR",
     "subtitle": "À quoi sert ce formulaire ?",
     "paragraphOne": "Ce formulaire nous permet de déterminer si vous êtes bénéficiaire ou non d'un ou plusieurs contrats d'assurance vie souscrit par le défunt chez un autre assureur que",
-    "insurerName": "[Nom]",
+    "insurerName": "Muteni",
     "paragraphTwo": "Cette précision nous permettra de définir l'abattement dont vous pouvez bénéficier et la fiscalité applicable en fonction de votre situation, ainsi que de vous en acquitter auprès de l'Administration fiscale.",
     "stepsTitle": "Les étapes à suivre",
     "stepOne": "Compléter le formulaire en ligne",
@@ -28,7 +28,7 @@
     "button": "Continuer"
   },
   "form": {
-    "subtitleStep1": "Les références [Nom]",
+    "subtitleStep1": "Les références Muteni",
     "subtitleStep2": "Vos informations",
     "subtitleStep3": "Votre situation fiscale",
     "subtitleStep4": "Récapitulatif",
@@ -44,6 +44,14 @@
     "firstName": "Prénom",
     "dateOfBirth": "Date de naissance",
     "clientNumber": "Numéro client",
-    "remark": "Veuillez noter que le défunt peut avoir plusieurs numéros client. C'est pourquoi le numéro affiché ici peut être différent de celui présent sur le formulaire reçu par courrier."
+    "remark": "Veuillez noter que le défunt peut avoir plusieurs numéros client. C'est pourquoi le numéro affiché ici peut être différent de celui présent sur le formulaire reçu par courrier.",
+    "errors": {
+      "required": "Ce champ est obligatoire.",
+      "minLength": "Ce champ doit contenir au moins {{min}} caractères.",
+      "maxLength": "Ce champ ne doit pas dépasser {{max}} caractères.",
+      "pattern": "Veuillez entrer une valeur valide (lettres, accents, tirets).",
+      "invalidDate": "Format de date invalide.",
+      "exactNumber": "Veuillez entrer exactement 8 chiffres."
+    }
   }
 }

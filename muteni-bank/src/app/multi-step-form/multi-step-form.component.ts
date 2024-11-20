@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-multi-step-form',
@@ -13,18 +18,109 @@ export class MultiStepFormComponent {
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       step1: this.fb.group({
-        firstName: ['', Validators.required],
-        lastName: ['', Validators.required],
-        dateOfBirth: ['', Validators.required],
-        clientNumber: ['', Validators.required],
+        firstName: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(2),
+            Validators.maxLength(50),
+            Validators.pattern('^[A-Za-zÀ-ÖØ-öø-ÿ\\-\\s]+$'), // Nom avec lettres, accents, tirets
+          ],
+        ],
+        lastName: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(2),
+            Validators.maxLength(50),
+            Validators.pattern('^[A-Za-zÀ-ÖØ-öø-ÿ\\-\\s]+$'), // Nom avec lettres, accents, tirets
+          ],
+        ],
+        dateOfBirth: ['', [Validators.required]],
+        clientNumber: [
+          '',
+          [
+            Validators.required,
+            Validators.pattern('^[0-9]{8}$'), // Exactement 8 chiffres
+          ],
+        ],
       }),
       step2: this.fb.group({
-        email: ['', [Validators.required, Validators.email]],
-        phone: ['', Validators.required],
+        firstName: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(2),
+            Validators.maxLength(50),
+            Validators.pattern('^[A-Za-zÀ-ÖØ-öø-ÿ\\-\\s]+$'), // Nom avec lettres, accents, tirets
+          ],
+        ],
+        secondName: [
+          '',
+          [
+            Validators.minLength(2),
+            Validators.maxLength(50),
+            Validators.pattern('^[A-Za-zÀ-ÖØ-öø-ÿ\\-\\s]+$'), // Nom avec lettres, accents, tirets
+          ],
+        ],
+        lastName: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(2),
+            Validators.maxLength(50),
+            Validators.pattern('^[A-Za-zÀ-ÖØ-öø-ÿ\\-\\s]+$'), // Nom avec lettres, accents, tirets
+          ],
+        ],
+        dateOfBirth: ['', [Validators.required]],
+        placeOfBirth: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(2),
+            Validators.maxLength(100),
+          ],
+        ],
+        countryOfBirth: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(2),
+            Validators.maxLength(50),
+          ],
+        ],
+        address: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(5),
+            Validators.maxLength(200),
+          ],
+        ],
+        addressComplement: ['', [Validators.maxLength(200)]],
+        postalCode: [
+          '',
+          [Validators.required, Validators.pattern('^[0-9]{5}$')],
+        ],
+        city: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(2),
+            Validators.maxLength(100),
+          ],
+        ],
+        country: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(2),
+            Validators.maxLength(50),
+          ],
+        ],
       }),
       step3: this.fb.group({
-        address: ['', Validators.required],
-        city: ['', Validators.required],
+        // Placeholder for step 3 validations
       }),
     });
   }
