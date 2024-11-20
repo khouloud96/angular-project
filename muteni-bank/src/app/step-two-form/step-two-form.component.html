@@ -1,20 +1,238 @@
 <div [formGroup]="$any(parentForm.get('step2'))">
-  <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input
-      type="email"
-      id="email"
-      class="form-control"
-      formControlName="email"
-    />
-  </div>
-  <div class="mb-3">
-    <label for="phone" class="form-label">Téléphone</label>
-    <input
-      type="text"
-      id="phone"
-      class="form-control"
-      formControlName="phone"
-    />
+  <div class="container">
+    <div class="row">
+      <p class="text-muted mb-3">
+        {{ "form.notice" | translate }}
+      </p>
+
+      <!-- 1ère partie du formulaire -->
+      <div class="col-md-5">
+        <h5>Votre identité</h5>
+        <div class="mb-3 position-relative">
+          <label for="lastName" class="form-label h6">{{
+            "form.lastName" | translate
+          }}</label>
+          <input
+            type="text"
+            id="lastName"
+            class="form-control"
+            formControlName="lastName"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step2')?.get('lastName')?.valid &&
+                parentForm.get('step2')?.get('lastName')?.touched,
+              'is-invalid':
+                parentForm.get('step2')?.get('lastName')?.invalid &&
+                parentForm.get('step2')?.get('lastName')?.touched
+            }"
+          />
+        </div>
+
+        <div class="mb-3 position-relative">
+          <label for="secondName" class="form-label h6"
+            >Nom d'usage (si différent)</label
+          >
+          <input
+            type="text"
+            id="secondName"
+            class="form-control"
+            formControlName="secondName"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step2')?.get('secondName')?.valid &&
+                parentForm.get('step2')?.get('secondName')?.touched,
+              'is-invalid':
+                parentForm.get('step2')?.get('secondName')?.invalid &&
+                parentForm.get('step2')?.get('secondName')?.touched
+            }"
+          />
+        </div>
+
+        <div class="mb-3 position-relative">
+          <label for="firstName" class="form-label h6">{{
+            "form.firstName" | translate
+          }}</label>
+          <input
+            type="text"
+            id="firstName"
+            class="form-control"
+            formControlName="firstName"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step2')?.get('firstName')?.valid &&
+                parentForm.get('step2')?.get('firstName')?.touched,
+              'is-invalid':
+                parentForm.get('step2')?.get('firstName')?.invalid &&
+                parentForm.get('step2')?.get('firstName')?.touched
+            }"
+          />
+        </div>
+
+        <div class="mb-3 position-relative">
+          <label for="dateOfBirth" class="form-label h6">{{
+            "form.dateOfBirth" | translate
+          }}</label>
+          <input
+            type="date"
+            id="dateOfBirth"
+            class="form-control"
+            formControlName="dateOfBirth"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step2')?.get('dateOfBirth')?.valid &&
+                parentForm.get('step2')?.get('dateOfBirth')?.touched,
+              'is-invalid':
+                parentForm.get('step2')?.get('dateOfBirth')?.invalid &&
+                parentForm.get('step2')?.get('dateOfBirth')?.touched
+            }"
+          />
+        </div>
+
+        <div class="mb-3 position-relative">
+          <label for="placeOfBirth" class="form-label h6"
+            >Ville de naissance</label
+          >
+          <input
+            type="text"
+            id="placeOfBirth"
+            class="form-control"
+            formControlName="placeOfBirth"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step2')?.get('placeOfBirth')?.valid &&
+                parentForm.get('step2')?.get('placeOfBirth')?.touched,
+              'is-invalid':
+                parentForm.get('step2')?.get('placeOfBirth')?.invalid &&
+                parentForm.get('step2')?.get('placeOfBirth')?.touched
+            }"
+          />
+        </div>
+
+        <div class="mb-3 position-relative">
+          <label for="countryOfBirth" class="form-label h6"
+            >Pays de naissance</label
+          >
+          <input
+            type="text"
+            id="countryOfBirth"
+            class="form-control"
+            formControlName="countryOfBirth"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step2')?.get('countryOfBirth')?.valid &&
+                parentForm.get('step2')?.get('countryOfBirth')?.touched,
+              'is-invalid':
+                parentForm.get('step2')?.get('countryOfBirth')?.invalid &&
+                parentForm.get('step2')?.get('countryOfBirth')?.touched
+            }"
+          />
+        </div>
+      </div>
+
+      <!-- un trait entre les deux forms -->
+      <div
+        class="col-md-2 d-none d-md-flex justify-content-center align-items-center"
+      >
+        <div style="width: 1px; height: 100%; background-color: #ccc"></div>
+      </div>
+
+      <!-- 2ème partie du formulaire -->
+      <div class="col-md-5">
+        <h5>Votre domicile</h5>
+        <div class="mb-3 position-relative">
+          <label for="address" class="form-label h6"
+            >Adresse de la résidence principale</label
+          >
+          <input
+            type="text"
+            id="address"
+            class="form-control"
+            formControlName="address"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step2')?.get('address')?.valid &&
+                parentForm.get('step2')?.get('address')?.touched,
+              'is-invalid':
+                parentForm.get('step2')?.get('address')?.invalid &&
+                parentForm.get('step2')?.get('address')?.touched
+            }"
+          />
+        </div>
+
+        <div class="mb-3 position-relative">
+          <label for="addressComplement" class="form-label h6"
+            >Complément d'adresse</label
+          >
+          <input
+            type="text"
+            id="addressComplement"
+            class="form-control"
+            formControlName="addressComplement"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step2')?.get('addressComplement')?.valid &&
+                parentForm.get('step2')?.get('addressComplement')?.touched,
+              'is-invalid':
+                parentForm.get('step2')?.get('addressComplement')?.invalid &&
+                parentForm.get('step2')?.get('addressComplement')?.touched
+            }"
+          />
+        </div>
+
+        <div class="mb-3 position-relative">
+          <label for="postalCode" class="form-label h6">Code postal</label>
+          <input
+            type="text"
+            id="postalCode"
+            class="form-control"
+            formControlName="postalCode"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step2')?.get('postalCode')?.valid &&
+                parentForm.get('step2')?.get('postalCode')?.touched,
+              'is-invalid':
+                parentForm.get('step2')?.get('postalCode')?.invalid &&
+                parentForm.get('step2')?.get('postalCode')?.touched
+            }"
+          />
+        </div>
+
+        <div class="mb-3 position-relative">
+          <label for="city" class="form-label h6">Ville</label>
+          <input
+            type="text"
+            id="city"
+            class="form-control"
+            formControlName="city"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step2')?.get('city')?.valid &&
+                parentForm.get('step2')?.get('city')?.touched,
+              'is-invalid':
+                parentForm.get('step2')?.get('city')?.invalid &&
+                parentForm.get('step2')?.get('city')?.touched
+            }"
+          />
+        </div>
+
+        <div class="mb-3 position-relative">
+          <label for="country" class="form-label h6">Pays</label>
+          <input
+            type="text"
+            id="country"
+            class="form-control"
+            formControlName="country"
+            [ngClass]="{
+              'is-valid':
+                parentForm.get('step2')?.get('country')?.valid &&
+                parentForm.get('step2')?.get('country')?.touched,
+              'is-invalid':
+                parentForm.get('step2')?.get('country')?.invalid &&
+                parentForm.get('step2')?.get('country')?.touched
+            }"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </div>
