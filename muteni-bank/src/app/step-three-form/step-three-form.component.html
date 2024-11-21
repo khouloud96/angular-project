@@ -4,6 +4,10 @@
       <p class="mb-4 d-flex align-items-center gap-2 marginT important">
         <span class="cercle cercle-sm cercle-md cercle-lg"> ! </span>
         {{ "form.important" | translate }}
+        {{ " " }}
+        {{ formData.deceasedFirstName }}
+        {{ " " }}
+        {{ formData.deceasedLastName }}.
       </p>
       <p class="text-muted mb-4 marginL">
         {{ "form.instruction" | translate }}
@@ -21,12 +25,14 @@
               name="taxSituation"
               class="form-check-input"
               formControlName="taxSituation"
-              [value]="'A'"
+              [value]="combinedTextA"
             />
             <label class="form-check-label" for="situationA">
               <strong>{{ "form.situationA" | translate }}</strong>
               : {{ "form.textApart1" | translate }}
-              <strong>{{ "form.textApart2" | translate }} </strong
+              <strong>
+                {{ formData.deceasedClientNumber }} {{ " " }}
+                {{ "form.textApart2" | translate }} </strong
               >{{ "form.textApart3" | translate }}
             </label>
           </div>
@@ -38,7 +44,7 @@
               name="taxSituation"
               class="form-check-input"
               formControlName="taxSituation"
-              [value]="'B'"
+              [value]="combinedTextB"
             />
             <label class="form-check-label" for="situationB">
               <strong>{{ "form.situationB" | translate }}</strong>

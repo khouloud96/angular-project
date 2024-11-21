@@ -2,11 +2,11 @@
   <!-- Section 1: Informations du défunt -->
   <div class="row mb-4">
     <div class="col-12">
-      <h5>Informations du défunt</h5>
+      <h5>{{ "form.deceasedInformation" | translate }}</h5>
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Nom</li>
+        <li>{{ "form.lastName" | translate }}</li>
         <li>
           <strong>{{ formData.deceasedLastName }}</strong>
         </li>
@@ -14,7 +14,7 @@
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Prénom</li>
+        <li>{{ "form.firstName" | translate }}</li>
         <li>
           <strong>{{ formData.deceasedFirstName }}</strong>
         </li>
@@ -22,7 +22,7 @@
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Date de naissance</li>
+        <li>{{ "form.dateOfBirth" | translate }}</li>
         <li>
           <strong>{{ formData.deceasedDateOfBirth }}</strong>
         </li>
@@ -30,7 +30,7 @@
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Numéro client</li>
+        <li>{{ "form.clientNumber" | translate }}</li>
         <li>
           <strong>{{ formData.deceasedClientNumber }}</strong>
         </li>
@@ -47,11 +47,11 @@
   <!-- Section 2: Vos informations -->
   <div class="row mb-4">
     <div class="col-12">
-      <h5>Vos informations</h5>
+      <h5>{{ "form.subtitleStep2" | translate }}</h5>
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Nom</li>
+        <li>{{ "form.lastName" | translate }}</li>
         <li>
           <strong>{{ formData.lastName }}</strong>
         </li>
@@ -59,7 +59,7 @@
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Nom d'usage</li>
+        <li>{{ "form.secondName" | translate }}</li>
         <li>
           <strong>{{ formData.secondName }}</strong>
         </li>
@@ -67,7 +67,7 @@
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Prénom</li>
+        <li>{{ "form.firstName" | translate }}</li>
         <li>
           <strong>{{ formData.firstName }}</strong>
         </li>
@@ -75,7 +75,7 @@
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Date de naissance</li>
+        <li>{{ "form.dateOfBirth" | translate }}</li>
         <li>
           <strong>{{ formData.dateOfBirth }}</strong>
         </li>
@@ -83,7 +83,7 @@
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Ville de naissance</li>
+        <li>{{ "form.cityOfBirth" | translate }}</li>
         <li>
           <strong>{{ formData.cityOfBirth }}</strong>
         </li>
@@ -91,7 +91,7 @@
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Pays de naissance</li>
+        <li>{{ "form.countryOfBirth" | translate }}</li>
         <li>
           <strong>{{ formData.countryOfBirth }}</strong>
         </li>
@@ -99,7 +99,7 @@
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Adresse de la résidence principale</li>
+        <li>{{ "form.address" | translate }}</li>
         <li>
           <strong>{{ formData.address }}</strong>
         </li>
@@ -107,7 +107,10 @@
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Complémentd'adresse (facultatif)</li>
+        <li>
+          {{ "form.addressComplement" | translate }} {{ " " }}
+          {{ "form.optional" | translate }}
+        </li>
         <li>
           <strong>{{ formData.addressComplement }}</strong>
         </li>
@@ -115,7 +118,7 @@
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Code postale</li>
+        <li>{{ "form.postalCode" | translate }}</li>
         <li>
           <strong>{{ formData.postalCode }}</strong>
         </li>
@@ -123,7 +126,7 @@
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Ville</li>
+        <li>{{ "form.city" | translate }}</li>
         <li>
           <strong>{{ formData.city }}</strong>
         </li>
@@ -131,7 +134,7 @@
     </div>
     <div class="col-6 col-md-2">
       <ul class="list-unstyled">
-        <li>Pays</li>
+        <li>{{ "form.country" | translate }}</li>
         <li>
           <strong>{{ formData.country }}</strong>
         </li>
@@ -148,10 +151,12 @@
   <!-- Section 3: Situation fiscale -->
   <div class="row mb-4">
     <div class="col-12">
-      <h5>Situation fiscale</h5>
+      <h5>{{ "form.taxSituationTitle" | translate }}</h5>
     </div>
     <div class="col-12">
-      <p>Vous avez déclaré, {{ formData.taxSituation }}</p>
+      <p>
+        {{ "form.taxSituationText" | translate }} {{ formData.taxSituation }}
+      </p>
     </div>
     <div class="col-12 mt-4">
       <button type="button" (click)="goToStep(3)">

@@ -11,9 +11,10 @@ export class StepTwoFormComponent {
 
   // liste de pays à sélectionner
   countries: Array<{ id: string; name: string }> = [
-    { id: 'US', name: 'États-Unis' },
-    { id: 'FR', name: 'France' },
-    { id: 'DE', name: 'Allemagne' },
-    { id: 'IN', name: 'Inde' },
+    { id: 'États-Unis', name: 'États-Unis' },
+    { id: 'France', name: 'France' },
+    { id: 'Allemagne', name: 'Allemagne' },
+    { id: 'Inde', name: 'Inde' },
+    { id: 'Tunisie', name: 'Tunisie' },
   ];
 }
