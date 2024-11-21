@@ -18,7 +18,7 @@ export class MultiStepFormComponent {
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       step1: this.fb.group({
-        firstName: [
+        deceasedFirstName: [
           '',
           [
             Validators.required,
@@ -27,7 +27,7 @@ export class MultiStepFormComponent {
             Validators.pattern('^[A-Za-zÀ-ÖØ-öø-ÿ\\-\\s]+$'), // Nom avec lettres, accents, tirets
           ],
         ],
-        lastName: [
+        deceasedLastName: [
           '',
           [
             Validators.required,
@@ -36,8 +36,8 @@ export class MultiStepFormComponent {
             Validators.pattern('^[A-Za-zÀ-ÖØ-öø-ÿ\\-\\s]+$'), // Nom avec lettres, accents, tirets
           ],
         ],
-        dateOfBirth: ['', [Validators.required]],
-        clientNumber: [
+        deceasedDateOfBirth: ['', [Validators.required]],
+        deceasedClientNumber: [
           '',
           [
             Validators.required,

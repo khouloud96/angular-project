@@ -7,51 +7,51 @@
           {{ "form.notice" | translate }}
         </p>
         <div class="mb-3 position-relative">
-          <label for="lastName" class="form-label h6">{{
+          <label for="deceasedLastName" class="form-label h6">{{
             "form.lastName" | translate
           }}</label>
           <input
             type="text"
-            id="lastName"
+            id="deceasedLastName"
             class="form-control"
-            formControlName="lastName"
+            formControlName="deceasedLastName"
             [ngClass]="{
               'is-valid':
-                parentForm.get('step1')?.get('lastName')?.valid &&
-                parentForm.get('step1')?.get('lastName')?.touched,
+                parentForm.get('step1')?.get('deceasedLastName')?.valid &&
+                parentForm.get('step1')?.get('deceasedLastName')?.touched,
               'is-invalid':
-                parentForm.get('step1')?.get('lastName')?.invalid &&
-                parentForm.get('step1')?.get('lastName')?.touched
+                parentForm.get('step1')?.get('deceasedLastName')?.invalid &&
+                parentForm.get('step1')?.get('deceasedLastName')?.touched
             }"
           />
           <!-- Message d'erreur -->
           <div
             *ngIf="
-              parentForm.get('step1')?.get('lastName')?.invalid &&
-              parentForm.get('step1')?.get('lastName')?.touched
+              parentForm.get('step1')?.get('deceasedLastName')?.invalid &&
+              parentForm.get('step1')?.get('deceasedLastName')?.touched
             "
           >
             <div
               class="text-danger"
-              *ngIf="parentForm.get('step1')?.get('lastName')?.errors?.['required']"
+              *ngIf="parentForm.get('step1')?.get('deceasedLastName')?.errors?.['required']"
             >
               {{ "form.errors.required" | translate }}
             </div>
             <div
               class="text-danger"
-              *ngIf="parentForm.get('step1')?.get('lastName')?.errors?.['minlength']"
+              *ngIf="parentForm.get('step1')?.get('deceasedLastName')?.errors?.['minlength']"
             >
-              {{ 'form.errors.minLength' | translate: { min: parentForm.get('step1')?.get('lastName')?.errors?.['minlength']?.requiredLength } }}
+              {{ 'form.errors.minLength' | translate: { min: parentForm.get('step1')?.get('deceasedLastName')?.errors?.['minlength']?.requiredLength } }}
             </div>
             <div
               class="text-danger"
-              *ngIf="parentForm.get('step1')?.get('lastName')?.errors?.['maxlength']"
+              *ngIf="parentForm.get('step1')?.get('deceasedLastName')?.errors?.['maxlength']"
             >
-              {{ 'form.errors.maxLength' | translate: { max: parentForm.get('step1')?.get('lastName')?.errors?.['maxlength']?.requiredLength } }}
+              {{ 'form.errors.maxLength' | translate: { max: parentForm.get('step1')?.get('deceasedLastName')?.errors?.['maxlength']?.requiredLength } }}
             </div>
             <div
               class="text-danger"
-              *ngIf="parentForm.get('step1')?.get('lastName')?.errors?.['pattern']"
+              *ngIf="parentForm.get('step1')?.get('deceasedLastName')?.errors?.['pattern']"
             >
               {{ "form.errors.pattern" | translate }}
             </div>
@@ -59,51 +59,51 @@
         </div>
 
         <div class="mb-3 position-relative">
-          <label for="firstName" class="form-label h6">{{
+          <label for="deceasedFirstName" class="form-label h6">{{
             "form.firstName" | translate
           }}</label>
           <input
             type="text"
-            id="firstName"
+            id="deceasedFirstName"
             class="form-control"
-            formControlName="firstName"
+            formControlName="deceasedFirstName"
             [ngClass]="{
               'is-valid':
-                parentForm.get('step1')?.get('firstName')?.valid &&
-                parentForm.get('step1')?.get('firstName')?.touched,
+                parentForm.get('step1')?.get('deceasedFirstName')?.valid &&
+                parentForm.get('step1')?.get('deceasedFirstName')?.touched,
               'is-invalid':
-                parentForm.get('step1')?.get('firstName')?.invalid &&
-                parentForm.get('step1')?.get('firstName')?.touched
+                parentForm.get('step1')?.get('deceasedFirstName')?.invalid &&
+                parentForm.get('step1')?.get('deceasedFirstName')?.touched
             }"
           />
           <!-- Message d'erreur -->
           <div
             *ngIf="
-              parentForm.get('step1')?.get('firstName')?.invalid &&
-              parentForm.get('step1')?.get('firstName')?.touched
+              parentForm.get('step1')?.get('deceasedFirstName')?.invalid &&
+              parentForm.get('step1')?.get('deceasedFirstName')?.touched
             "
           >
             <div
               class="text-danger"
-              *ngIf="parentForm.get('step1')?.get('firstName')?.errors?.['required']"
+              *ngIf="parentForm.get('step1')?.get('deceasedFirstName')?.errors?.['required']"
             >
               {{ "form.errors.required" | translate }}
             </div>
             <div
               class="text-danger"
-              *ngIf="parentForm.get('step1')?.get('firstName')?.errors?.['minlength']"
+              *ngIf="parentForm.get('step1')?.get('deceasedFirstName')?.errors?.['minlength']"
             >
-              {{ 'form.errors.minLength' | translate: { min: parentForm.get('step1')?.get('firstName')?.errors?.['minlength']?.requiredLength } }}
+              {{ 'form.errors.minLength' | translate: { min: parentForm.get('step1')?.get('deceasedFirstName')?.errors?.['minlength']?.requiredLength } }}
             </div>
             <div
               class="text-danger"
-              *ngIf="parentForm.get('step1')?.get('firstName')?.errors?.['maxlength']"
+              *ngIf="parentForm.get('step1')?.get('deceasedFirstName')?.errors?.['maxlength']"
             >
-              {{ 'form.errors.maxLength' | translate: { max: parentForm.get('step1')?.get('firstName')?.errors?.['maxlength']?.requiredLength } }}
+              {{ 'form.errors.maxLength' | translate: { max: parentForm.get('step1')?.get('deceasedFirstName')?.errors?.['maxlength']?.requiredLength } }}
             </div>
             <div
               class="text-danger"
-              *ngIf="parentForm.get('step1')?.get('firstName')?.errors?.['pattern']"
+              *ngIf="parentForm.get('step1')?.get('deceasedFirstName')?.errors?.['pattern']"
             >
               {{ "form.errors.pattern" | translate }}
             </div>
@@ -111,29 +111,29 @@
         </div>
 
         <div class="mb-3 position-relative">
-          <label for="dateOfBirth" class="form-label h6">{{
+          <label for="deceasedDateOfBirth" class="form-label h6">{{
             "form.dateOfBirth" | translate
           }}</label>
           <input
             type="date"
-            id="dateOfBirth"
+            id="deceasedDateOfBirth"
             class="form-control"
-            formControlName="dateOfBirth"
+            formControlName="deceasedDateOfBirth"
             [ngClass]="{
               'is-valid':
-                parentForm.get('step1')?.get('dateOfBirth')?.valid &&
-                parentForm.get('step1')?.get('dateOfBirth')?.touched,
+                parentForm.get('step1')?.get('deceasedDateOfBirth')?.valid &&
+                parentForm.get('step1')?.get('deceasedDateOfBirth')?.touched,
               'is-invalid':
-                parentForm.get('step1')?.get('dateOfBirth')?.invalid &&
-                parentForm.get('step1')?.get('dateOfBirth')?.touched
+                parentForm.get('step1')?.get('deceasedDateOfBirth')?.invalid &&
+                parentForm.get('step1')?.get('deceasedDateOfBirth')?.touched
             }"
           />
           <!-- Message d'erreur -->
           <div
             class="invalid-feedback"
             *ngIf="
-              parentForm.get('step1')?.get('dateOfBirth')?.invalid &&
-              parentForm.get('step1')?.get('dateOfBirth')?.touched
+              parentForm.get('step1')?.get('deceasedDateOfBirth')?.invalid &&
+              parentForm.get('step1')?.get('deceasedDateOfBirth')?.touched
             "
           >
             {{ "form.errors.required" | translate }}
@@ -141,7 +141,7 @@
         </div>
 
         <div class="mb-3 position-relative">
-          <label for="clientNumber" class="form-label h6">{{
+          <label for="deceasedClientNumber" class="form-label h6">{{
             "form.clientNumber" | translate
           }}</label>
           <p class="text-muted" style="font-style: italic">
@@ -149,34 +149,34 @@
           </p>
           <input
             type="number"
-            id="clientNumber"
+            id="deceasedClientNumber"
             class="form-control"
-            formControlName="clientNumber"
+            formControlName="deceasedClientNumber"
             [ngClass]="{
               'is-valid':
-                parentForm.get('step1')?.get('clientNumber')?.valid &&
-                parentForm.get('step1')?.get('clientNumber')?.touched,
+                parentForm.get('step1')?.get('deceasedClientNumber')?.valid &&
+                parentForm.get('step1')?.get('deceasedClientNumber')?.touched,
               'is-invalid':
-                parentForm.get('step1')?.get('clientNumber')?.invalid &&
-                parentForm.get('step1')?.get('clientNumber')?.touched
+                parentForm.get('step1')?.get('deceasedClientNumber')?.invalid &&
+                parentForm.get('step1')?.get('deceasedClientNumber')?.touched
             }"
           />
           <!-- Message d'erreur -->
           <div
             *ngIf="
-              parentForm.get('step1')?.get('clientNumber')?.invalid &&
-              parentForm.get('step1')?.get('clientNumber')?.touched
+              parentForm.get('step1')?.get('deceasedClientNumber')?.invalid &&
+              parentForm.get('step1')?.get('deceasedClientNumber')?.touched
             "
           >
             <div
               class="text-danger"
-              *ngIf="parentForm.get('step1')?.get('clientNumber')?.errors?.['required']"
+              *ngIf="parentForm.get('step1')?.get('deceasedClientNumber')?.errors?.['required']"
             >
               {{ "form.errors.required" | translate }}
             </div>
             <div
               class="text-danger"
-              *ngIf="parentForm.get('step1')?.get('clientNumber')?.errors?.['pattern']"
+              *ngIf="parentForm.get('step1')?.get('deceasedClientNumber')?.errors?.['pattern']"
             >
               {{ "form.errors.exactNumber" | translate }}
             </div>

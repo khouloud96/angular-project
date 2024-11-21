@@ -1,0 +1,14 @@
+h5 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+hr {
+  border: 1px solid #ccc;
+}

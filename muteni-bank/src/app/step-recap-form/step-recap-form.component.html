@@ -1,28 +1,163 @@
-<div>
-  <ul class="list-group mb-3">
-    <li class="list-group-item">
-      <strong>Prénom :</strong> {{ formData.firstName }} <strong>Nom :</strong>
-      {{ formData.lastName }}
+<div class="container mt-4">
+  <!-- Section 1: Informations du défunt -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <h5>Informations du défunt</h5>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Nom</li>
+        <li>
+          <strong>{{ formData.deceasedLastName }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Prénom</li>
+        <li>
+          <strong>{{ formData.deceasedFirstName }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Date de naissance</li>
+        <li>
+          <strong>{{ formData.deceasedDateOfBirth }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Numéro client</li>
+        <li>
+          <strong>{{ formData.deceasedClientNumber }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-12 mt-4">
       <button type="button" (click)="goToStep(1)">
         {{ "form.buttonUpdate" | translate }}
       </button>
-    </li>
+    </div>
+  </div>
+  <hr />
 
-    <li class="list-group-item">
-      <strong>Email :</strong> {{ formData.email }}
-      <strong>Téléphone :</strong> {{ formData.phone }}
-
+  <!-- Section 2: Vos informations -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <h5>Vos informations</h5>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Nom</li>
+        <li>
+          <strong>{{ formData.lastName }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Nom d'usage</li>
+        <li>
+          <strong>{{ formData.secondName }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Prénom</li>
+        <li>
+          <strong>{{ formData.firstName }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Date de naissance</li>
+        <li>
+          <strong>{{ formData.dateOfBirth }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Ville de naissance</li>
+        <li>
+          <strong>{{ formData.cityOfBirth }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Pays de naissance</li>
+        <li>
+          <strong>{{ formData.countryOfBirth }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Adresse de la résidence principale</li>
+        <li>
+          <strong>{{ formData.address }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Complémentd'adresse (facultatif)</li>
+        <li>
+          <strong>{{ formData.addressComplement }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Code postale</li>
+        <li>
+          <strong>{{ formData.postalCode }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Ville</li>
+        <li>
+          <strong>{{ formData.city }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-2">
+      <ul class="list-unstyled">
+        <li>Pays</li>
+        <li>
+          <strong>{{ formData.country }}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-12 mt-4">
       <button type="button" (click)="goToStep(2)">
         {{ "form.buttonUpdate" | translate }}
       </button>
-    </li>
+    </div>
+  </div>
+  <hr />
 
-    <li class="list-group-item">
-      <strong>Adresse :</strong> {{ formData.address }}
-      <strong>Ville :</strong> {{ formData.city }}
+  <!-- Section 3: Situation fiscale -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <h5>Situation fiscale</h5>
+    </div>
+    <div class="col-12">
+      <p>Vous avez déclaré, {{ formData.taxSituation }}</p>
+    </div>
+    <div class="col-12 mt-4">
       <button type="button" (click)="goToStep(3)">
         {{ "form.buttonUpdate" | translate }}
       </button>
-    </li>
-  </ul>
+    </div>
+  </div>
+  <hr />
 </div>
