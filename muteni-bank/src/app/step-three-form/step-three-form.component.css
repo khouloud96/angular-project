@@ -1,0 +1,46 @@
+.cercle {
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Cercle pour les petits écrans (mobile) */
+.cercle-sm {
+  width: 50px;
+  height: 20px;
+  font-size: 15px;
+}
+
+/* Cercle pour les grands écrans (desktop) */
+.cercle-lg,
+.cercle-md {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+}
+
+.marginL {
+  margin-left: 2rem;
+}
+
+.marginT {
+  margin-top: 1rem;
+}
+
+.form-check-input:checked {
+  background-color: var(--turquoise-blue);
+  border-color: var(--turquoise-blue);
+}
+
+@media (max-width: 768px) {
+  .important {
+    gap: 1rem;
+  }
+
+  .cercle {
+    width: 50px;
+    height: 20px;
+    font-size: 15px;
+  }
+}

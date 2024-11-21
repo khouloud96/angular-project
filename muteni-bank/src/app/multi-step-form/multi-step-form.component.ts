@@ -106,7 +106,7 @@ export class MultiStepFormComponent {
         country: ['', [Validators.required]],
       }),
       step3: this.fb.group({
-        // Placeholder for step 3 validations
+        taxSituation: ['', [Validators.required]],
       }),
     });
   }
