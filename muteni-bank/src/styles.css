@@ -29,7 +29,9 @@ button {
 }
 
 button:hover {
-  background-color: var(--hover);
+  border: 1px solid var(--hover);
+  color: var(--hover);
+  background-color: var(--white);
 }
 
 /* Titres */

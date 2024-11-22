@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-multi-step-form',
@@ -15,7 +16,7 @@ export class MultiStepFormComponent {
   currentStep = 1;
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.form = this.fb.group({
       step1: this.fb.group({
         deceasedFirstName: [
@@ -135,9 +136,7 @@ export class MultiStepFormComponent {
   submit() {
     if (this.form.valid) {
       console.log(this.form.value);
-      alert('Formulaire soumis avec succès !');
-    } else {
-      alert('Veuillez compléter tous les champs requis.');
+      this.router.navigate(['/form-sent-success']);
     }
   }
 }

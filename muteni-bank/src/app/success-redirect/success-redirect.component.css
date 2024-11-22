@@ -1,0 +1,15 @@
+.marginT {
+  margin-top: 7rem;
+}
+
+a {
+  border: 1px solid var(--turquoise-blue);
+  border-radius: 50px;
+  color: var(--turquoise-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: var(--turquoise-blue);
+  color: var(--white);
+}
