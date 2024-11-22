@@ -10,6 +10,7 @@ a {
 }
 
 a:hover {
-  background-color: var(--turquoise-blue);
+  border: 1px solid var(--dark-blue);
+  background-color: var(--dark-blue);
   color: var(--white);
 }
