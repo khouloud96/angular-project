@@ -80,6 +80,12 @@
       "postalCode": "Veuillez entrer un code postal valide",
       "invalidDate": "Format de date invalide.",
       "exactNumber": "Veuillez entrer exactement 8 chiffres."
+    },
+    "successRedirect": {
+      "title": "Votre formulaire a bien été envoyé !",
+      "paragraph": "Nos équipes reviendront vers vous dans les plus brefs délais.",
+      "backButton": "Retour à l'accueil",
+      "imgAlt": "homme assis envoyant une lettre"
     }
   }
 }

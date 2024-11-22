@@ -79,6 +79,12 @@
       "postalCode": "Please enter a valid postal code.",
       "invalidDate": "Invalid date format.",
       "exactNumber": "Please enter exactly 8 digits."
+    },
+    "successRedirect": {
+      "title": "Your form has been successfully submitted!",
+      "paragraph": "Our teams will get back to you as soon as possible.",
+      "backButton": "Return to home",
+      "imgAlt": "sitting man sending letter"
     }
   }
 }
