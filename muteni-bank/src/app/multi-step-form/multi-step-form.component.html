@@ -1,7 +1,7 @@
 <div class="container mt-4">
   <div class="d-flex align-items-center mb-4">
     <div
-      class="circle bg-light text-primary d-flex justify-content-center align-items-center me-3"
+      class="circle d-flex justify-content-center align-items-center me-3"
       style="width: 50px; height: 50px; border-radius: 50%"
     >
       <svg
@@ -91,7 +91,6 @@
         type="button"
         class="mb-4"
         (click)="nextStep()"
-        [disabled]="!form.get(['step' + currentStep])?.valid"
       >
         {{ "form.buttonNext" | translate }}
       </button>

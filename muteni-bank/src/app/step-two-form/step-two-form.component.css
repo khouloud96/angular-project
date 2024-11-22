@@ -2,27 +2,3 @@
   border-color: var(--hover);
   box-shadow: 0 0 0 0.2rem rgba(85, 165, 181, 0.25);
 }
-
-.form-control.is-valid::after {
-  content: "";
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
-  background-color: #28a745;
-  border-radius: 50%;
-}
-
-.form-control.is-invalid::after {
-  content: "";
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
-  background-color: #dc3545;
-  border-radius: 50%;
-}

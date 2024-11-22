@@ -5,3 +5,8 @@
 a {
   color: var(--turquoise-blue) !important;
 }
+
+a:hover {
+  color: var(--dark-blue) !important;
+  font-size: 17px;
+}

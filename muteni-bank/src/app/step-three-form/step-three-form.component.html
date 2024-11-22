@@ -53,15 +53,16 @@
               {{ "form.textBpart3" | translate }}
             </label>
           </div>
-
           <div
             *ngIf="
-              parentForm.get('taxSituation')?.touched &&
-              parentForm.get('taxSituation')?.invalid
+              parentForm.get('step3.taxSituation')?.touched &&
+              parentForm.get('step3.taxSituation')?.invalid
             "
             class="text-danger"
           >
-            <span *ngIf="parentForm.get('taxSituation')?.hasError('required')">
+            <span
+              *ngIf="parentForm.get('step3.taxSituation')?.hasError('required')"
+            >
               {{ "form.errors.required" | translate }}
             </span>
           </div>

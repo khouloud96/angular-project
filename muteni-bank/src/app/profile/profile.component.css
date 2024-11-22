@@ -9,6 +9,15 @@
   transition: fill 0.3s ease;
 }
 
+.circle:hover {
+  border: 2px solid var(--dark-blue);
+  background-color: var(--dark-blue);
+}
+
+.circle svg:hover {
+  color: var(--white);
+}
+
 .steps .step {
   flex: 1;
   text-align: center;

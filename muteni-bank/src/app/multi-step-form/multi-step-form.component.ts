@@ -114,7 +114,26 @@ export class MultiStepFormComponent {
 
   // Gestion des étapes
   nextStep() {
-    if (this.currentStep < 4) this.currentStep++;
+    const currentStepForm = this.form.get('step' + this.currentStep);
+    console.log('currentStepForm: ', currentStepForm);
+
+    if (!currentStepForm) {
+      console.error(`FormGroup de l'étape ${this.currentStep} introuvable.`);
+      return;
+    }
+
+    // Si le formulaire est invalide, marquez tous les champs comme touchés pour afficher les erreurs
+    if (currentStepForm.invalid) {
+      console.warn(`Formulaire invalide à l'étape ${this.currentStep}`);
+      currentStepForm.markAllAsTouched(); // Affiche les messages d'erreur
+      return; // Bloque le passage à l'étape suivante
+    }
+
+    // Si le formulaire est valide, passez à l'étape suivante
+    if (this.currentStep < 4) {
+      this.currentStep++;
+      console.log(`Passage à l'étape suivante : Étape ${this.currentStep}`);
+    }
   }
 
   previousStep() {
