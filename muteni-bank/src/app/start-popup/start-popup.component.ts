@@ -22,6 +22,10 @@ export class StartPopupComponent {
     const backdropElements = document.querySelectorAll('.modal-backdrop');
     backdropElements.forEach((backdrop) => backdrop.remove());
 
+    // **Étape 3 : Réinitialiser le style du body**
+    document.body.style.overflow = ''; // Réinitialise l'overflow
+    document.body.classList.remove('modal-open'); // Supprime toute classe Bootstrap résiduelle
+
     this.router.navigate(['/honor-declaration-form']);
   }
 }
