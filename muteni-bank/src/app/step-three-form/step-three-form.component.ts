@@ -18,10 +18,11 @@ export class StepThreeFormComponent implements OnInit {
 
   ngOnInit(): void {
     const textApart1 = this.translate.instant('form.textApart1');
+    const textAClientNumber = this.formData.deceasedClientNumber;
     const textApart2 = this.translate.instant('form.textApart2');
     const textApart3 = this.translate.instant('form.textApart3');
 
-    this.combinedTextA = `${textApart1} ${textApart2} ${textApart3}`;
+    this.combinedTextA = `${textApart1} ${textAClientNumber} ${textApart2} ${textApart3}`;
 
     const textBpart1 = this.translate.instant('form.textBpart1');
     const textBpart2 = this.translate.instant('form.textBpart2');

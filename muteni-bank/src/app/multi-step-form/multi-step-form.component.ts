@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -6,17 +6,22 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LocalStorageService } from '../services/local-storage.service';
 
 @Component({
   selector: 'app-multi-step-form',
   templateUrl: './multi-step-form.component.html',
   styleUrl: './multi-step-form.component.css',
 })
-export class MultiStepFormComponent {
+export class MultiStepFormComponent implements OnInit {
   currentStep = 1;
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private localStorageService: LocalStorageService
+  ) {
     this.form = this.fb.group({
       step1: this.fb.group({
         deceasedFirstName: [
@@ -112,6 +117,11 @@ export class MultiStepFormComponent {
     });
   }
 
+  ngOnInit(): void {
+    // Charger les données sauvegardées
+    this.loadFormData();
+  }
+
   // Gestion des étapes
   nextStep() {
     const currentStepForm = this.form.get('step' + this.currentStep);
@@ -128,6 +138,9 @@ export class MultiStepFormComponent {
       currentStepForm.markAllAsTouched(); // Affiche les messages d'erreur
       return; // Bloque le passage à l'étape suivante
     }
+
+    // Sauvegarde des données dans le localStorage
+    this.saveFormData();
 
     // Si le formulaire est valide, passez à l'étape suivante
     if (this.currentStep < 4) {
@@ -152,10 +165,29 @@ export class MultiStepFormComponent {
     };
   }
 
+  // Sauvegarde formData dans le Local Storage
+  saveFormData(): void {
+    const formData = this.form.value;
+    localStorage.setItem('formData', JSON.stringify(formData));
+  }
+
+  // Charge formData depuis le Local Storage
+  loadFormData(): void {
+    const savedData = localStorage.getItem('formData'); // Récupère les données sauvegardées
+    if (savedData) {
+      const parsedData = JSON.parse(savedData); // Parse les données JSON
+      this.form.patchValue(parsedData); // Met à jour le formulaire avec `patchValue`
+    }
+  }
+
   submit() {
     if (this.form.valid) {
       console.log(this.form.value);
       this.router.navigate(['/form-sent-success']);
+
+      // Après soumission, videz le localStorage
+      localStorage.removeItem('formData');
+      console.log('LocalStorage vidé après soumission.');
     }
   }
 }
