@@ -17,4 +17,14 @@ export class StepTwoFormComponent {
     { id: 'Inde', name: 'Inde' },
     { id: 'Tunisie', name: 'Tunisie' },
   ];
+
+  isChevronRotated = false;
+
+  onFocusChevron() {
+    this.isChevronRotated = true; // Applique l'effet de rotation au focus
+  }
+
+  onBlurChevron() {
+    this.isChevronRotated = false; // Retire l'effet de rotation au blur
+  }
 }
