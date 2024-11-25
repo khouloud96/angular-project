@@ -1,6 +1,13 @@
 # Muteni-Bank
 
-multi steps form.
+A multi-step form in Angular with language management and local data storage.
+
+## Technological Stack
+
+- Frontend: Angular, Bootstrap
+- Language: TypeScript
+- Translations: ngx-translate
+- Backup Locale: LocalStorage (with Angular service)
 
 ## Getting started
 

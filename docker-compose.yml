@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: muteni-bank/Dockerfile
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
     ports:
       - "4200:80"
     restart: always
