@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  AbstractControl,
-  FormBuilder,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LocalStorageService } from '../services/local-storage.service';
 
@@ -168,12 +163,12 @@ export class MultiStepFormComponent implements OnInit {
   // Sauvegarde formData dans le Local Storage
   saveFormData(): void {
     const formData = this.form.value;
-    localStorage.setItem('formData', JSON.stringify(formData));
+    this.localStorageService.setItem('formData', JSON.stringify(formData));
   }
 
   // Charge formData depuis le Local Storage
   loadFormData(): void {
-    const savedData = localStorage.getItem('formData'); // Récupère les données sauvegardées
+    const savedData = this.localStorageService.getItem('formData'); // Récupère les données sauvegardées
     if (savedData) {
       const parsedData = JSON.parse(savedData); // Parse les données JSON
       this.form.patchValue(parsedData); // Met à jour le formulaire avec `patchValue`
@@ -186,7 +181,7 @@ export class MultiStepFormComponent implements OnInit {
       this.router.navigate(['/form-sent-success']);
 
       // Après soumission, videz le localStorage
-      localStorage.removeItem('formData');
+      this.localStorageService.removeItem('formData');
       console.log('LocalStorage vidé après soumission.');
     }
   }
