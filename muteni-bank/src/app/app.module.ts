@@ -20,6 +20,7 @@ import { StepTwoFormComponent } from './step-two-form/step-two-form.component';
 import { StepThreeFormComponent } from './step-three-form/step-three-form.component';
 import { StepRecapFormComponent } from './step-recap-form/step-recap-form.component';
 import { SuccessRedirectComponent } from './success-redirect/success-redirect.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 // Fonction pour charger les fichiers de traduction
 export function HttpLoaderFactory(http: HttpClient) {
@@ -39,6 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     StepThreeFormComponent,
     StepRecapFormComponent,
     SuccessRedirectComponent,
+    BreadcrumbComponent,
   ],
   imports: [
     BrowserModule,

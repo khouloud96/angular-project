@@ -87,5 +87,12 @@
       "backButton": "Retour à l'accueil",
       "imgAlt": "homme assis envoyant une lettre"
     }
+  },
+  "breadcrumb": {
+    "profile": "Profil",
+    "deceasedInformation": "Informations du défunt",
+    "yourInformation": "Vos informations",
+    "taxSituation": "Votre situation fiscale",
+    "summary": "Récapitulatif"
   }
 }

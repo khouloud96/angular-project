@@ -113,8 +113,23 @@ export class MultiStepFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.updateCurrentStepBasedOnRoute();
     // Charger les données sauvegardées
     this.loadFormData();
+  }
+
+  private updateCurrentStepBasedOnRoute(): void {
+    const currentRoute = this.router.url;
+
+    if (currentRoute.includes('step1')) {
+      this.currentStep = 1;
+    } else if (currentRoute.includes('step2')) {
+      this.currentStep = 2;
+    } else if (currentRoute.includes('step3')) {
+      this.currentStep = 3;
+    } else if (currentRoute.includes('step4')) {
+      this.currentStep = 4;
+    }
   }
 
   // Gestion des étapes
@@ -142,6 +157,13 @@ export class MultiStepFormComponent implements OnInit {
       this.currentStep++;
       console.log(`Passage à l'étape suivante : Étape ${this.currentStep}`);
     }
+
+    // Naviguer à l'étape correspondante
+    const stepRoutes = ['step1', 'step2', 'step3', 'step4'];
+    this.router.navigate([
+      '/honor-declaration-form',
+      stepRoutes[this.currentStep - 1],
+    ]);
   }
 
   previousStep() {

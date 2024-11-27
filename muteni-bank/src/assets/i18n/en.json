@@ -86,5 +86,12 @@
       "backButton": "Return to home",
       "imgAlt": "sitting man sending letter"
     }
+  },
+  "breadcrumb": {
+    "profile": "Profile",
+    "deceasedInformation": "Deceased information",
+    "yourInformation": "Your information",
+    "taxSituation": "Your tax situation",
+    "summary": "Summary"
   }
 }
