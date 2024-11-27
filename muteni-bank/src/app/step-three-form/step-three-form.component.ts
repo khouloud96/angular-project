@@ -17,6 +17,14 @@ export class StepThreeFormComponent implements OnInit {
   constructor(private translate: TranslateService) {}
 
   ngOnInit(): void {
+    // Restaurer l'état du formulaire si disponible
+    const savedState = this.formData.taxSituation;
+    if (savedState) {
+      this.parentForm.patchValue({
+        taxSituation: this.translate.instant(savedState),
+      });
+    }
+
     const textApart1 = this.translate.instant('form.textApart1');
     const textAClientNumber = this.formData.deceasedClientNumber;
     const textApart2 = this.translate.instant('form.textApart2');
