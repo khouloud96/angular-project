@@ -15,9 +15,14 @@
   color: var(--turquoise-blue);
 }
 
+.breadcrumb-item a:hover {
+  color: var(--dark-blue);
+}
+
 .breadcrumb-item.active {
   font-weight: bold;
-  color: #000;
+  color: var(--dark-blue);
+  cursor: pointer;
 }
 
 .breadcrumb-title {
@@ -34,4 +39,8 @@
 .separator {
   margin: 0 5px;
   color: var(--turquoise-blue);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: none;
 }

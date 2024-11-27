@@ -33,3 +33,9 @@
   margin-right: 5px;
   vertical-align: middle;
 }
+
+.dropdown-menu li a:hover {
+  background-color: var(--turquoise-blue);
+  color: var(--dark-blue);
+  font-weight: 600;
+}
