@@ -261,7 +261,7 @@
             <option value="" disabled selected>
               {{ "form.selectCountry" | translate }}
             </option>
-            <option *ngFor="let country of countries" [value]="country.id">
+            <option *ngFor="let country of countries" [value]="country.name">
               {{ country.name }}
             </option>
           </select>
@@ -493,7 +493,7 @@
             <option value="" disabled selected>
               {{ "form.selectCountry" | translate }}
             </option>
-            <option *ngFor="let country of countries" [value]="country.id">
+            <option *ngFor="let country of countries" [value]="country.name">
               {{ country.name }}
             </option>
           </select>
