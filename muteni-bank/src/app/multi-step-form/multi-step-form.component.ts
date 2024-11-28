@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LocalStorageService } from '../services/local-storage.service';
+import { AddressService } from '../services/address.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-multi-step-form',
@@ -14,6 +16,7 @@ export class MultiStepFormComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private addressService: AddressService,
     private router: Router,
     private localStorageService: LocalStorageService
   ) {
@@ -114,6 +117,7 @@ export class MultiStepFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateCurrentStepBasedOnRoute();
+    this.onAddressChanges();
     // Charger les données sauvegardées
     this.loadFormData();
   }
@@ -130,6 +134,40 @@ export class MultiStepFormComponent implements OnInit {
     } else if (currentRoute.includes('step4')) {
       this.currentStep = 4;
     }
+  }
+
+  onAddressChanges(): void {
+    this.form.get('step2.address')?.valueChanges.subscribe((value) => {
+      if (value && value.length > 3) {
+        this.addressService.searchAddress(value).subscribe({
+          next: (response) => {
+            if (response?.length > 0) {
+              const firstResult = response[0].address;
+              this.form.patchValue({
+                step2: {
+                  postalCode: firstResult.postcode || '',
+                  city:
+                    firstResult.city ||
+                    firstResult.town ||
+                    firstResult.village ||
+                    '',
+                  country: firstResult.country || '',
+                },
+              });
+            } else {
+              console.warn('Aucune adresse trouvée.');
+            }
+          },
+          error: (error: HttpErrorResponse) => {
+            if (error.status === 504) {
+              console.error("Erreur 504 : Temps d'attente dépassé.");
+            } else {
+              console.error(`Erreur HTTP : ${error.message}`);
+            }
+          },
+        });
+      }
+    });
   }
 
   // Gestion des étapes
