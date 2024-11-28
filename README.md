@@ -9,7 +9,7 @@ A multi-step form in Angular with language management and local data storage.
 - Translations: ngx-translate
 - Backup Locale: LocalStorage (with Angular service)
 
-![stack technologique](https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/stack%20technologique.png)
+  <img width="1000" alt="stack technologique" src="https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/stack%20technologique.png">
 
 ## Getting started
 
