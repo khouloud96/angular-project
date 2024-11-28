@@ -76,5 +76,3 @@ This project uses `LocalStorage` service to manage the data of a multi-step form
 - Automatically save the step data to avoid losing it in case the page is reloaded.
 - Load this data at startup to allow the user to pick up where they left off.
 - Clean the data after form submission to avoid cluttering the LocalStorage.
-
----
