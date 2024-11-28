@@ -64,3 +64,17 @@ This project uses the `ngx-translate` library to handle multilingual user interf
    ```bash
    npm install @ngx-translate/core @ngx-translate/http-loader
    ```
+
+# Data management with a LocalStorage service
+
+This project uses `LocalStorage` service to manage the data of a multi-step form in Angular in order to automatically save, load, and clear the data of a Reactive form.
+
+---
+
+## Features
+
+- Automatically save the step data to avoid losing it in case the page is reloaded.
+- Load this data at startup to allow the user to pick up where they left off.
+- Clean the data after form submission to avoid cluttering the LocalStorage.
+
+---
