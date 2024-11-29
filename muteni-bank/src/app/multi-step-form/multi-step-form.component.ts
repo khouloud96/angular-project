@@ -142,6 +142,7 @@ export class MultiStepFormComponent implements OnInit {
         this.addressService.searchAddress(value).subscribe({
           next: (response) => {
             if (response?.length > 0) {
+              // Récupérer la première correspondance
               const firstResult = response[0].address;
               this.form.patchValue({
                 step2: {
@@ -156,17 +157,31 @@ export class MultiStepFormComponent implements OnInit {
               });
             } else {
               console.warn('Aucune adresse trouvée.');
+              this.clearAddressFields();
             }
           },
-          error: (error: HttpErrorResponse) => {
-            if (error.status === 504) {
-              console.error("Erreur 504 : Temps d'attente dépassé.");
-            } else {
-              console.error(`Erreur HTTP : ${error.message}`);
-            }
+          error: (error) => {
+            console.error(
+              `Erreur lors de la recherche d'adresse : ${error.message}`
+            );
+            this.clearAddressFields();
           },
         });
+      } else {
+        // Réinitialiser les champs si l'entrée est trop courte
+        this.clearAddressFields();
       }
+    });
+  }
+
+  // Méthode pour réinitialiser les champs d'adresse
+  private clearAddressFields(): void {
+    this.form.patchValue({
+      step2: {
+        postalCode: '',
+        city: '',
+        country: '',
+      },
     });
   }
 

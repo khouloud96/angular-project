@@ -17,13 +17,17 @@ export class StepTwoFormComponent implements OnInit {
   constructor(private countryService: CountryService) {}
 
   ngOnInit(): void {
-    // Récupérer les pays depuis le service
     this.countryService.getCountries().subscribe({
       next: (countries) => {
+        if (countries.length === 0) {
+          console.warn('Aucun pays disponible pour la langue actuelle.');
+        }
+        console.log('Pays transformés reçus :', countries);
         this.countries = countries;
         this.errorLoadingCountries = false;
       },
-      error: () => {
+      error: (err) => {
+        console.error('Erreur lors du chargement des pays:', err);
         this.errorLoadingCountries = true;
       },
     });

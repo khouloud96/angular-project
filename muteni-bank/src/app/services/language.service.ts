@@ -40,4 +40,16 @@ export class LanguageService {
   getAvailableLanguages(): string[] {
     return this.availableLanguages;
   }
+
+  getRestCountriesLang(lang: string): string {
+    const langMap: { [key: string]: string } = {
+      fr: 'fra',
+      en: 'eng',
+    };
+    return langMap[lang] || 'fra'; // Par défaut : français
+  }
+
+  getCurrentLanguage(): string {
+    return this.currentLanguage.value; // Retourne la langue actuelle
+  }
 }

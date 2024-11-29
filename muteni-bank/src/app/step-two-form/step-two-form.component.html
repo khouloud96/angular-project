@@ -519,6 +519,19 @@
               {{ "form.errors.required" | translate }}
             </div>
           </div>
+
+          <div *ngIf="errorLoadingCountries" class="text-danger">
+            {{
+              "Erreur lors du chargement des pays. Veuillez réessayer plus tard."
+                | translate
+            }}
+          </div>
+          <div
+            *ngIf="countries.length === 0 && !errorLoadingCountries"
+            class="text-warning"
+          >
+            {{ "Aucun pays trouvé pour la langue sélectionnée." | translate }}
+          </div>
         </div>
       </div>
     </div>
