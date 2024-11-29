@@ -65,3 +65,35 @@
     max-width: 80%;
   }
 }
+
+.breadcrumb {
+  padding: 0;
+  background: none;
+}
+
+.breadcrumb-item {
+  font-size: 14px;
+}
+
+.breadcrumb-item a {
+  color: var(--turquoise-blue);
+}
+
+.breadcrumb-item a:hover {
+  color: var(--dark-blue);
+}
+
+.breadcrumb-item.active {
+  font-weight: bold;
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+
+.separator {
+  margin: 0 5px;
+  color: var(--turquoise-blue);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: none;
+}

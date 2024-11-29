@@ -10,3 +10,7 @@
 .chevron.rotated {
   transform: rotate(180deg);
 }
+
+.bi-chevron-down::before {
+  content: "";
+}

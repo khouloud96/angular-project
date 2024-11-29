@@ -88,6 +88,7 @@
     }
   },
   "breadcrumb": {
+    "home": "Home",
     "profile": "Profile",
     "deceasedInformation": "Deceased information",
     "yourInformation": "Your information",

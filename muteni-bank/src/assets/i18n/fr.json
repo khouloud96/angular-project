@@ -89,6 +89,7 @@
     }
   },
   "breadcrumb": {
+    "home": "Accueil",
     "profile": "Profil",
     "deceasedInformation": "Informations du défunt",
     "yourInformation": "Vos informations",
