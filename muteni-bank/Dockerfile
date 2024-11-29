@@ -24,7 +24,7 @@ RUN npm run build --prod
 FROM nginx:stable-alpine
 
 # Copier les fichiers construits d'Angular dans le répertoire Nginx
-COPY --from=build /app/dist/ /usr/share/nginx/html
+COPY --from=build /app/dist/muteni-bank/browser /usr/share/nginx/html
 
 # Copier le fichier de configuration Nginx
 COPY default.conf /etc/nginx/conf.d/default.conf
