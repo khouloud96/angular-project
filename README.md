@@ -13,6 +13,14 @@ And that, through a multi-step form in Angular, with language management and loc
 
   <img width="50%" alt="stack technologique" src="https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/stack%20technologique.png">
 
+## Versions
+
+### Angular CLI: 18.2.12
+
+- Node: 20.18.0
+- Package Manager: npm 10.8.2
+- OS: win32 x64
+
 ## Getting started
 
 To run the project locally, execute these commands:
@@ -22,14 +30,6 @@ cd muteni-bank
 npm install
 ng serve
 ```
-
-## Versions
-
-### Angular CLI: 18.2.12
-
-- Node: 20.18.0
-- Package Manager: npm 10.8.2
-- OS: win32 x64
 
 ## Build and Run with docker compose
 
