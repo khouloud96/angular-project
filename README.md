@@ -51,14 +51,6 @@ This project uses the `ngx-translate` library to handle multilingual user interf
 
 ---
 
-## Features
-
-- **Multilingual support**: Translations are available for multiple languages.
-- **Runtime language switching**: Users can change the language without reloading the application.
-- **Dynamic loading**: Translations are loaded on demand from JSON files.
-
----
-
 ## Installation
 
 1. **Install the required dependencies**:
@@ -66,6 +58,14 @@ This project uses the `ngx-translate` library to handle multilingual user interf
    ```bash
    npm install @ngx-translate/core @ngx-translate/http-loader
    ```
+
+---
+
+## Features
+
+- **Multilingual support**: Translations are available for multiple languages.
+- **Runtime language switching**: Users can change the language without reloading the application.
+- **Dynamic loading**: Translations are loaded on demand from JSON files.
 
 # Data management with a LocalStorage service
 
