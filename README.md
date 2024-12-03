@@ -1,6 +1,8 @@
 # Muteni-Bank
 
-A multi-step form in Angular with language management and local data storage.
+This project simplifies and automates the process of generating and validating an honor declaration for beneficiaries. It aims to provide an intuitive and efficient solution to collect the necessary information and guide the user through the different steps of the form.
+
+And that, through a multi-step form in Angular, with language management and local data storage.
 
 ## Technological Stack
 
@@ -9,7 +11,7 @@ A multi-step form in Angular with language management and local data storage.
 - Translations: ngx-translate
 - Backup Locale: LocalStorage (with Angular service)
 
-  <img width="50%" width="50%" alt="stack technologique" src="https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/stack%20technologique.png">
+  <img width="50%" alt="stack technologique" src="https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/stack%20technologique.png">
 
 ## Getting started
 
@@ -76,3 +78,33 @@ This project uses `LocalStorage` service to manage the data of a multi-step form
 - Automatically save the step data to avoid losing it in case the page is reloaded.
 - Load this data at startup to allow the user to pick up where they left off.
 - Clean the data after form submission to avoid cluttering the LocalStorage.
+
+# Project ScreenShot
+
+### Form Introduction
+
+<img width="80%" alt="Form Introduction" src="https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/form%20introduction.PNG">
+
+### Modal Accept Conditions
+
+<img width="80%" alt="Modal Accept Conditions" src="https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/modal%20accept%20conditions.PNG">
+
+### Step 1 : The deceased Information
+
+<img width="80%" alt="The deceased Information" src="https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/step1.PNG">
+
+### Step 2 : Beneficiary information
+
+<img width="80%" alt="Beneficiary information" src="https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/step2.PNG">
+
+### Step 3 : Tax Situation
+
+<img width="80%" alt="Tax Situation" src="https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/step3.PNG">
+
+### Step 4 : Summary
+
+<img width="80%" alt="Summary" src="https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/summary.PNG">
+
+## Confirmation Form Submit
+
+<img width="80%" alt="Confirmation Form Submit" src="https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/form%20confirm.PNG">
