@@ -15,7 +15,7 @@ And that, through a multi-step form in Angular, with language management and loc
 
 ## Project Architecture
 
-  <img width="50%" alt="Architecture" src="https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/architecture.png">
+  <img width="90%" alt="Architecture" src="https://github.com/khouloud96/angular-project/blob/master/muteni-bank/src/assets/images/architecture.png">
 
 ## Versions
 
