@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LocalStorageService } from '../services/local-storage.service';
-import { AddressService } from '../services/address.service';
+import { LocalStorageService } from '../../../services/local-storage.service';
+import { AddressService } from '../../../services/address.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
@@ -164,7 +164,7 @@ export class MultiStepFormComponent implements OnInit {
             console.error(
               `Erreur lors de la recherche d'adresse : ${error.message}`
             );
-            this.clearAddressFields();
+            //this.clearAddressFields();
           },
         });
       } else {

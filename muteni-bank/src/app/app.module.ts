@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MuteniHeaderComponent } from './muteni-header/muteni-header.component';
+import { MuteniHeaderComponent } from './components/muteni-header/muteni-header.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {
@@ -11,16 +11,16 @@ import {
   provideHttpClient,
   withInterceptorsFromDi,
 } from '@angular/common/http';
-import { ProfileComponent } from './profile/profile.component';
-import { StartPopupComponent } from './start-popup/start-popup.component';
-import { MultiStepFormComponent } from './multi-step-form/multi-step-form.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { StartPopupComponent } from './components/start-popup/start-popup.component';
+import { MultiStepFormComponent } from './components/honorDeclarationForm/multi-step-form/multi-step-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { StepOneFormComponent } from './step-one-form/step-one-form.component';
-import { StepTwoFormComponent } from './step-two-form/step-two-form.component';
-import { StepThreeFormComponent } from './step-three-form/step-three-form.component';
-import { StepRecapFormComponent } from './step-recap-form/step-recap-form.component';
-import { SuccessRedirectComponent } from './success-redirect/success-redirect.component';
-import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { StepOneFormComponent } from './components/honorDeclarationForm/step-one-form/step-one-form.component';
+import { StepTwoFormComponent } from './components/honorDeclarationForm/step-two-form/step-two-form.component';
+import { StepThreeFormComponent } from './components/honorDeclarationForm/step-three-form/step-three-form.component';
+import { StepRecapFormComponent } from './components/honorDeclarationForm/step-recap-form/step-recap-form.component';
+import { SuccessRedirectComponent } from './components/honorDeclarationForm/success-redirect/success-redirect.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 // Fonction pour charger les fichiers de traduction
 export function HttpLoaderFactory(http: HttpClient) {

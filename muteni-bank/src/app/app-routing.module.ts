@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProfileComponent } from './profile/profile.component';
-import { MultiStepFormComponent } from './multi-step-form/multi-step-form.component';
-import { SuccessRedirectComponent } from './success-redirect/success-redirect.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { MultiStepFormComponent } from './components/honorDeclarationForm/multi-step-form/multi-step-form.component';
+import { SuccessRedirectComponent } from './components/honorDeclarationForm/success-redirect/success-redirect.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'profile', pathMatch: 'full' },

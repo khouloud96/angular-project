@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { CountryService } from '../services/country.service';
+import { CountryService } from '../../../services/country.service';
 
 @Component({
   selector: 'app-step-two-form',
